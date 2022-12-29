@@ -1,3 +1,51 @@
-<h1>
-Hello World
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Hand written digit classification</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="feature_1" placeholder="feature_1" required="required" /><br>
+    	<input type="text" name="feature_2" placeholder="feature_2" required="required" /><br>
+        <input type="text" name="feature_3" placeholder="feature_3" required="required" /><br>
+        <input type="text" name="feature_4" placeholder="feature_4" required="required" /><br>
+        <input type="text" name="feature_5" placeholder="feature_5" required="required" /><br>
+        <input type="text" name="feature_6" placeholder="feature_6" required="required" /><br>
+        <input type="text" name="feature_7" placeholder="feature_7" required="required" /><br>
+        <input type="text" name="feature_8" placeholder="feature_8" required="required" /><br>
+        <input type="text" name="feature_9" placeholder="feature_9" required="required" /><br>
+        <input type="text" name="feature_10" placeholder="feature_10" required="required" /><br>
+        <input type="text" name="feature_11" placeholder="feature_11" required="required" /><br>
+        <input type="text" name="feature_12" placeholder="feature_12" required="required" /><br>
+        <input type="text" name="feature_13" placeholder="feature_13" required="required" /><br>
+        <input type="text" name="feature_14" placeholder="feature_14" required="required" /><br>
+        <input type="text" name="feature_15" placeholder="feature_15" required="required" /><br>
+        <input type="text" name="feature_16" placeholder="feature_16" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{predicted_output}}
+
+</body>
+</html>

@@ -23,5 +23,14 @@ def predict_api():
     print(output)
     return jsonify(output)
 
+@app.route('/predict',methods=['POST'])
+def predict():
+    data=[float(x) for x in request.form.values()]
+    tsne_input=np.array(data).reshape(1,-1)
+    print(tsne_input)
+    output=load_model.predict(tsne_input)[0]
+    return render_template("home.html",predicted_output="The predcted output digit is {}".format(output))
+
+
 if __name__=="__main__":
     app.run(debug=True)
