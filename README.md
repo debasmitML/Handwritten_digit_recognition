@@ -5,3 +5,5 @@ From scikit-learn mnist handwritten digit dataset has been taken and then t-SNE 
 
 2. using CNN:
 Tensorflow handwwritten digit dataset has been taken and and allthe images have been normalised. ResNet like architecture has been built for the classification
+
+3. app.py is written for web app application.
